@@ -22,5 +22,6 @@ void setup() {
 	frame.add(gp);
 	frame.setSize(WIDTH, HEIGHT);
 	frame.addKeyListener(gp);
+
 }
 }
