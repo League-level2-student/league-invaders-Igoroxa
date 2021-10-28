@@ -39,6 +39,8 @@ public void update () {
 		if(LeagueInvaders.HEIGHT > itproject.y) {
 			itproject.isActive = false;
 		}
+		checkCollision();
+		purgeObjects();
 		}
 	
 }
@@ -69,9 +71,26 @@ public void purgeObjects() {
 		}
 			}
 }
+public void checkCollision() {
+//	for (int i = 0; i < aliens.size(); i++) {
+//		Alien finalalien = aliens.get(i);
+//	if (rocket.collisionBox.intersects(finalalien.collisionBox)) {
+//		rocket.isActive = false;
+//		finalalien.isActive = false;
+//	}
+//	for (int n = 0; n < projectiles.size(); n++) {
+//		Projectile finalproject = projectiles.get(n);
+//	if (finalproject.collisionBox.intersects(finalalien.collisionBox)) {
+//		finalalien.isActive = false;
+//		finalproject.isActive = false;
+//	}}
+//	}
+	
+}
 @Override
 public void actionPerformed(ActionEvent e) {
-	addAlien(italien);
+Alien nextalien = new Alien(LeagueInvaders.WIDTH, 0, 50, 50);
+	addAlien(nextalien);
 	
 }
 }

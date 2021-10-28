@@ -17,6 +17,11 @@ public class Rocketship extends GameObject {
 		    loadImage ("rocket.png");
 		}
 	}
+	public Projectile getProjectile() {
+	    return new Projectile(x+width/2, y, 10, 10);
+	} 
+ 
+
 	void loadImage(String imageFile) {
 	    if (needImage) {
 	        try {
@@ -38,9 +43,6 @@ void draw(Graphics g) {
     		g.fillRect(x, y, width, height);
     	}
 }
-public Projectile getProjectile() {
-    return new Projectile(x+width/2, y, 10, 10);
-} 
 public void up() {
 	y-=speed;
 }
