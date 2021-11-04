@@ -41,8 +41,14 @@ void draw(Graphics g) {
     	} else {
     		g.setColor(Color.BLUE);
     		g.fillRect(x, y, width, height);
+    	
+
     	}
+     g.setColor(Color.red);
+     g.drawRect(collisionBox.x, collisionBox.y, collisionBox.width, collisionBox.height);
+    
 }
+
 public void up() {
 	y-=speed;
 }
@@ -55,5 +61,8 @@ public void right() {
 public void left() {
 	x-=speed;
 }
-
+public void update() {
+	
+	super.update();
+}
 }

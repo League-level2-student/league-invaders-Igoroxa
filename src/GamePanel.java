@@ -55,11 +55,16 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
     
     void updateMenuState() {  }
     
-    void updateGameState() {
+    public void updateGameState() {
     	objectmanage.update();
+    	if (rocket.isActive == false) {
+			currentState = END;
+		}
     }
     
-    void updateEndState()  {  }
+    void updateEndState()  { 
+    	
+    }
     
     void drawMenuState(Graphics g) {
     	
@@ -117,7 +122,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 		}else if(currentState == END){
 		    updateEndState();
 		}
-		System.out.println("action");
+		
 		repaint();
 		
 	}
@@ -145,26 +150,26 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 			}
 		}
 		if (e.getKeyCode()==KeyEvent.VK_UP) {
-		    System.out.println("UP");
+		
 		    if (rocket.y >= 5) {
 		    rocket.up();
 		    }
 		    
 		}
 		if (e.getKeyCode() ==KeyEvent.VK_DOWN) {
-			System.out.println("DOWN");
+		
 			if (rocket.y <= 725) {
 			rocket.down();
 			}
 		}
 		if (e.getKeyCode() ==KeyEvent.VK_RIGHT) {
-			System.out.println("RIGHT");
+			
 			if (rocket.x <= 440) {
 			rocket.right();
 			}
 		}
 		if (e.getKeyCode() ==KeyEvent.VK_LEFT) {
-			System.out.println("LEFT");
+			
 			if (rocket.x >= 5) {
 			rocket.left();
 			}
