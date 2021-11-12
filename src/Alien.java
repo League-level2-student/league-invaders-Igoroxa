@@ -37,8 +37,8 @@ public class Alien extends GameObject {
         	g.setColor(Color.BLUE);
         	
         }
-        g.setColor(Color.red);
-        g.drawRect(collisionBox.x, collisionBox.y, collisionBox.width, collisionBox.height);
+      //  g.setColor(Color.red);
+       // g.drawRect(collisionBox.x, collisionBox.y, collisionBox.width, collisionBox.height);
 	}
 	public void update() {
 		y+=speed;
